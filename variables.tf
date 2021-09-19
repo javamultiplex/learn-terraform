@@ -4,8 +4,8 @@ variable "instance_name" {
   default     = "ExampleAppServerInstance"
 }
 
-variable "environment_name"{
-  description="Value of the Environment tag for the EC2 instance"
-  type = string
-  default="dev"
+variable "environment_name" {
+  description = "Value of the Environment tag for the EC2 instance"
+  type        = string
+  default     = "dev"
 }

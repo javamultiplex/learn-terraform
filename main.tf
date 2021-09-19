@@ -1,4 +1,12 @@
 terraform {
+
+  backend "remote" {
+    organization = "javamultiplex"
+    workspaces {
+      name = "learn-terraform"
+    }
+  }
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -21,7 +29,7 @@ resource "aws_instance" "app_server" {
   subnet_id              = "subnet-003b1906276f2b40a"
 
   tags = {
-    Name = var.instance_name
+    Name        = var.instance_name
     Environment = var.environment_name
   }
 }
